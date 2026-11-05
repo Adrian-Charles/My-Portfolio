@@ -2,6 +2,28 @@
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
+## Portfolio project structure
+
+```text
+app/
+  components/
+    layout/       # Shared page layout, header, and footer
+    ui/           # Reusable interface components
+  data/           # Portfolio content such as projects and skills
+  hooks/          # Reusable React hooks
+  lib/            # Shared utilities
+  routes/         # Route modules (home.tsx is the home page)
+  types/          # Shared TypeScript types
+  root.tsx        # App shell
+  app.css         # Global styles
+public/
+  documents/      # Resume and other downloadable files
+  images/         # Profile and general portfolio images
+  projects/       # Project-specific images and media
+```
+
+Keep route-specific pages in `app/routes`, reusable components in `app/components`, and static files in `public`.
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
 ## Features
