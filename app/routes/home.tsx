@@ -119,7 +119,7 @@ export default function Home() {
           href="#home"
           aria-label="Alex Morgan, home"
         >
-          am<span className="text-[#a4c73b]">.</span>
+          ACC<span className="text-[#a4c73b]">.</span>
         </a>
         <nav className="flex items-center gap-4 text-[11px] font-medium sm:gap-9 sm:text-xs" aria-label="Main navigation">
           <a className="transition-opacity hover:opacity-60" href="#work">Work</a>
@@ -153,7 +153,7 @@ export default function Home() {
           </h1>
           <div className="mt-8 sm:mt-10">
             <p className="max-w-[340px] text-[13px] leading-7 text-[#696a62]">
-              Hey, I&apos;m Alex — I turn thoughtful ideas into useful, memorable
+              Hey, I&apos;m Adrian — I turn thoughtful ideas into useful, memorable
               digital experiences.
             </p>
             <a
