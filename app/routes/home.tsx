@@ -3,52 +3,26 @@ import type { Route } from "./+types/home";
 const projects = [
   {
     number: "01",
-    name: "Northstar",
-    type: "Brand strategy · Digital",
+    name: "FindMyStuff",
+    type: "Full-stack development · Capstone project",
     description:
-      "A clearer, more confident digital home for a new generation of financial tools.",
-    wordmark: "northstar",
-    headline: "A better way forward.",
-    background: "bg-[#dce7dc]",
-    accent: "bg-[#b8d2ba]",
-    ink: "text-[#315040]",
+      "A lost-and-found management system with admin tools, smart matching, claim verification, and real-time reporting.",
+    wordmark: "find my stuff",
+    headline: "Helping things find their way home.",
+    background: "bg-[#252b27]",
+    accent: "bg-[#718b73]",
+    ink: "text-[#dce8dc]",
     shape: "rounded-full",
-  },
-  {
-    number: "02",
-    name: "Goodside",
-    type: "Product design · Development",
-    description:
-      "Making everyday sustainability feel simple, useful, and genuinely rewarding.",
-    wordmark: "goodside",
-    headline: "Small steps. Brighter days.",
-    background: "bg-[#f3dfce]",
-    accent: "bg-[#ed9774]",
-    ink: "text-[#507e5d]",
-    shape: "rounded-[60%_40%_55%_45%]",
-  },
-  {
-    number: "03",
-    name: "Objects in Play",
-    type: "Art direction · E-commerce",
-    description:
-      "An expressive storefront that gives independent makers room to stand out.",
-    wordmark: "objects in play",
-    headline: "Made to be kept.",
-    background: "bg-[#ddd9eb]",
-    accent: "bg-[#b6a8cd]",
-    ink: "text-[#58456d]",
-    shape: "rounded-t-full rounded-br-full",
   },
 ];
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Alex Morgan — Designer & Developer" },
+    { title: "Adrian Charles - Portfolio" },
     {
       name: "description",
       content:
-        "Alex Morgan is an independent designer and developer creating thoughtful digital experiences for people and brands.",
+        "Software engineering intern and BSIT graduate building practical web applications with TypeScript, React, PHP, SQL, and Firebase.",
     },
   ];
 }
@@ -112,20 +86,21 @@ function FlowerIllustration() {
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-[#f7f7f3] font-sans text-[#24251f] antialiased selection:bg-[#d3ef75]">
-      <header className="mx-auto flex h-[76px] w-full max-w-7xl items-center justify-between border-b border-[#dedfd7] px-5 sm:h-[88px] sm:px-8 lg:px-12">
+    <main className="overflow-hidden bg-[#111312] font-sans text-[#f2f3ef] antialiased selection:bg-[#c9d6a3] selection:text-[#111312]">
+      <header className="mx-auto flex h-[76px] w-full max-w-[1720px] items-center justify-between border-b border-white/10 px-5 sm:h-[88px] sm:px-8 lg:px-12">
         <a
           className="text-[30px] font-extrabold tracking-[-0.09em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#849d36]"
           href="#home"
-          aria-label="Alex Morgan, home"
+          aria-label="Adrian Charles, home"
         >
           ACC<span className="text-[#a4c73b]">.</span>
         </a>
         <nav className="flex items-center gap-4 text-[11px] font-medium sm:gap-9 sm:text-xs" aria-label="Main navigation">
-          <a className="transition-opacity hover:opacity-60" href="#work">Work</a>
+          <a className="transition-opacity hover:opacity-60" href="#work">Project</a>
           <a className="transition-opacity hover:opacity-60" href="#about">About</a>
+          <a className="hidden transition-opacity hover:opacity-60 sm:inline" href="#skills">Skills</a>
           <a
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#dedfd7] px-3 py-2.5 transition-colors hover:border-[#24251f] sm:gap-2 sm:px-4"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-2.5 transition-colors hover:border-white sm:gap-2 sm:px-4"
             href="#contact"
           >
             Let&apos;s talk <ArrowIcon diagonal />
@@ -134,30 +109,30 @@ export default function Home() {
       </header>
 
       <section
-        className="relative mx-auto grid min-h-[calc(100svh-76px)] w-full max-w-7xl items-center gap-2 px-5 py-12 sm:min-h-[650px] sm:px-8 sm:py-16 lg:grid-cols-[1.03fr_0.97fr] lg:px-12 lg:py-20"
+        className="relative mx-auto grid min-h-[calc(100svh-76px)] w-full max-w-[1720px] items-center gap-10 px-5 py-12 sm:min-h-[650px] sm:px-8 sm:py-16 lg:grid-cols-[1fr_1fr] lg:px-12 lg:py-20"
         id="home"
       >
         <div className="relative z-10">
-          <p className="flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#77786f] sm:text-[10px]">
-            <span className="size-2 rounded-full bg-[#9fbd45] ring-4 ring-[#eaf0d7]" />
-            Independent designer &amp; developer
+          <p className="flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#a9aca5] sm:text-[10px]">
+            <span className="size-2 rounded-full bg-[#b7c98a] ring-4 ring-[#23251f]" />
+            Software Engineer · BSIT Graduate
           </p>
-          <h1 className="mt-7 text-[clamp(3.5rem,10vw,5.25rem)] font-medium leading-[0.95] tracking-[-0.085em] sm:mt-8 sm:text-[clamp(4.5rem,7vw,5.75rem)]">
-            Making the
+          <h1 className="mt-7 text-[clamp(3.5rem,8vw,6.75rem)] font-medium leading-[0.95] tracking-[-0.085em] sm:mt-8">
+            Building useful
             <br />
-            internet feel
+            software with
             <br />
             <span className="font-serif font-normal italic tracking-[-0.075em]">
-              more human.
+              real-world impact.
             </span>
           </h1>
           <div className="mt-8 sm:mt-10">
-            <p className="max-w-[340px] text-[13px] leading-7 text-[#696a62]">
-              Hey, I&apos;m Adrian — I turn thoughtful ideas into useful, memorable
-              digital experiences.
+            <p className="max-w-[340px] text-[13px] leading-7 text-[#adb0a7]">
+              Hi, I&apos;m Adrian — a software engineer focused on web applications,
+              database integration, and dependable digital solutions.
             </p>
             <a
-              className="mt-5 inline-flex items-center gap-3 border-b border-[#aeb19f] pb-1.5 text-[11px] font-semibold transition-[gap] hover:gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#849d36]"
+              className="mt-5 inline-flex items-center gap-3 border-b border-white/25 pb-1.5 text-[11px] font-semibold transition-[gap] hover:gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b7c98a]"
               href="#work"
             >
               Explore my work <ArrowIcon />
@@ -165,62 +140,48 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className="relative mx-auto flex h-[350px] w-full max-w-[500px] items-center justify-center sm:h-[450px]"
-          role="img"
-          aria-label="A playful flower illustration on a field notes card"
-        >
-          <div className="absolute left-1/2 top-1/2 size-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e6edcc] sm:size-[350px]" />
-          <div className="absolute left-1/2 top-1/2 h-[190px] w-[280px] -translate-x-1/2 -translate-y-1/2 rotate-[-31deg] rounded-[50%] border border-[#d5dcc0] sm:h-[245px] sm:w-[430px]" />
-          <div className="absolute left-1/2 top-1/2 h-[165px] w-[280px] -translate-x-1/2 -translate-y-1/2 rotate-[54deg] rounded-[50%] border border-[#d5dcc0] sm:h-[185px] sm:w-[466px]" />
-          <div className="relative z-10 h-[300px] w-[238px] rotate-[5deg] bg-[#fefefb] p-4 shadow-[0_20px_70px_rgba(72,80,43,0.12)] sm:h-[352px] sm:w-[278px] sm:p-[18px]">
-            <div className="flex justify-between text-[7px] font-semibold tracking-[0.11em] text-[#818377]">
-              <span>FIELD NOTES&nbsp; / &nbsp;001</span>
-              <span>2025</span>
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <FlowerIllustration />
-            </div>
-            <div className="absolute inset-x-4 bottom-3 flex items-center justify-between text-[8px] text-[#515248] sm:inset-x-[18px] sm:bottom-4">
-              <span>Curiosity, in bloom.</span>
-              <SparkleIcon className="size-4" />
-            </div>
+        <div className="relative mx-auto flex h-[350px] w-full max-w-[500px] items-center justify-center sm:h-[450px]">
+          <div className="absolute left-1/2 top-1/2 h-[290px] w-[290px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10 sm:h-[440px] sm:w-[440px]" />
+          <div className="relative h-[310px] w-[235px] overflow-hidden rounded-[160px_160px_18px_18px] border border-white/15 bg-[#1b1e1a] shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:h-[440px] sm:w-[340px]">
+            <img
+              src="/images/adrian-charles.jpg"
+              alt="Adrian Charles"
+              className="h-full w-full object-cover object-[center_35%]"
+            />
           </div>
-          <SparkleIcon className="absolute right-[8%] top-[12%] size-6 text-[#e87a60]" />
-          <SparkleIcon className="absolute bottom-[14%] left-[8%] size-4 text-[#a1bc49]" />
-          <span className="absolute bottom-[8%] right-0 rotate-[-8deg] font-serif text-sm italic text-[#77786f]">
-            A little room to imagine.
+          <span className="absolute bottom-[4%] right-[4%] rounded-full border border-white/15 bg-[#111312]/90 px-3 py-2 text-[9px] tracking-[0.08em] text-[#c9d6a3]">
+            REACT / PHP / SQL / FIREBASE
           </span>
         </div>
 
         <a
-          className="absolute bottom-5 left-5 inline-flex items-center gap-3 text-[9px] tracking-wide text-[#77786f] sm:bottom-7 sm:left-8 lg:left-12"
+          className="absolute bottom-5 left-5 inline-flex items-center gap-3 text-[9px] tracking-wide text-[#8f9389] sm:bottom-7 sm:left-8 lg:left-12"
           href="#work"
         >
-          <span className="h-px w-9 bg-[#afb0a8]" />
+          <span className="h-px w-9 bg-white/25" />
           Scroll to explore
         </a>
       </section>
 
-      <section className="bg-[#eeefe9] py-20 sm:py-24 lg:py-28" id="work">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
+      <section className="border-t border-white/10 bg-[#171a18] py-20 sm:py-24 lg:py-28" id="work">
+        <div className="mx-auto w-full max-w-[1720px] px-5 sm:px-8 lg:px-12">
           <div className="mb-9 flex flex-col justify-between gap-4 sm:mb-11 sm:flex-row sm:items-end">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#77786f]">
-                A few things I&apos;ve made
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#92978e]">
+                Featured project
               </p>
               <h2 className="mt-3 text-4xl font-medium tracking-[-0.07em] sm:text-5xl">
-                Selected work<span className="text-[#a4c73b]">.</span>
+                FindMyStuff<span className="text-[#a4c73b]">.</span>
               </h2>
             </div>
-            <p className="font-serif text-[13px] italic leading-6 text-[#77786f] sm:text-right">
-              Good work starts with good questions.
+            <p className="font-serif text-[13px] italic leading-6 text-[#92978e] sm:text-right">
+              Built to solve a practical problem.
               <br />
-              Here are a few answers.
+              Designed for clear, reliable use.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 lg:grid-cols-3">
+          <div className="grid grid-cols-1 justify-items-start gap-8 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 lg:grid-cols-3">
             {projects.map((project) => (
               <article key={project.number} className="group">
                 <div className={`relative grid h-[clamp(230px,35vw,300px)] place-items-center overflow-hidden ${project.background}`}>
@@ -252,102 +213,110 @@ export default function Home() {
                 </div>
                 <div className="flex items-start justify-between gap-4 pt-4">
                   <div>
-                    <p className="mb-2 text-[9px] text-[#77786f]">{project.type}</p>
+                    <p className="mb-2 text-[9px] text-[#92978e]">{project.type}</p>
                     <h3 className="text-xl font-medium tracking-[-0.05em]">{project.name}</h3>
-                    <p className="mt-2 max-w-[300px] text-[11px] leading-5 text-[#72736a]">
+                    <p className="mt-2 max-w-[300px] text-[11px] leading-5 text-[#a8aba2]">
                       {project.description}
                     </p>
                   </div>
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full border border-[#d3d4ca] transition-colors group-hover:border-[#d3ef75] group-hover:bg-[#d3ef75]">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full border border-white/15 transition-colors group-hover:border-[#d3ef75] group-hover:bg-[#d3ef75] group-hover:text-[#111312]">
                     <ArrowIcon diagonal />
                   </span>
                 </div>
               </article>
             ))}
           </div>
-          <p className="mt-10 text-center font-serif text-xs italic text-[#77786f]">
-            More good things are in the works.
+          <p className="mt-10 text-center font-serif text-xs italic text-[#92978e]">
+            A practical full-stack solution from requirements to implementation.
           </p>
         </div>
       </section>
 
-      <section className="py-20 sm:py-24 lg:py-28" id="about">
-        <div className="relative mx-auto grid w-full max-w-7xl gap-7 px-5 sm:grid-cols-[0.65fr_1.6fr] sm:gap-9 sm:px-8 lg:grid-cols-[0.72fr_1.5fr_0.55fr] lg:gap-12 lg:px-12">
+      <section className="border-t border-white/10 py-20 sm:py-24 lg:py-28" id="about">
+        <div className="relative mx-auto grid w-full max-w-[1720px] gap-7 px-5 sm:grid-cols-[0.65fr_1.6fr] sm:gap-9 sm:px-8 lg:grid-cols-[0.72fr_1.5fr_0.55fr] lg:gap-12 lg:px-12">
           <div>
-            <p className="pr-20 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#77786f]">
-              A little about me
+            <p className="pr-20 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#92978e]">
+              Experience &amp; education
             </p>
             <span className="mt-16 hidden font-serif text-5xl text-[#a4bd55] sm:block">↘</span>
           </div>
           <div className="pr-0 sm:pr-12 lg:pr-0">
             <h2 className="text-[clamp(2.2rem,5vw,2.9rem)] font-medium leading-[1.1] tracking-[-0.07em]">
-              Part curious mind,
+              Engineering-minded,
               <br />
-              part pixel perfectionist.
+              delivery-focused.
             </h2>
-            <p className="mt-5 max-w-[540px] text-xs leading-7 text-[#707168]">
-              I&apos;m an independent creative partner who loves bringing people,
-              design, and technology together. From the first rough sketch to the
-              final launch, I make digital things that feel considered, clear,
-              and a little unexpected.
+            <p className="mt-5 max-w-[540px] text-xs leading-7 text-[#a8aba2]">
+              I&apos;m an aspiring software engineer with hands-on experience developing
+              and maintaining web application modules. During my internship, I
+              implemented frontend features, resolved backend exceptions, improved
+              validation and data handling, and collaborated through Agile workflows,
+              Azure DevOps, code reviews, and team testing.
             </p>
-            <div className="mt-5 flex flex-wrap gap-2" aria-label="Areas of expertise">
-              {["Digital strategy", "Visual identity", "Product design", "Creative development"].map((skill) => (
-                <span key={skill} className="rounded-full border border-[#dedfd7] px-3 py-2 text-[9px] text-[#62635b]">
+            <div className="mt-5 flex flex-wrap gap-2" id="skills" aria-label="Technical skills">
+              {["TypeScript", "JavaScript", "React", "PHP", "SQL", "Firebase", "Java", "C#", "C++", "REST APIs"].map((skill) => (
+                <span key={skill} className="rounded-full border border-white/15 px-3 py-2 text-[9px] text-[#b7bab0]">
                   {skill}
                 </span>
               ))}
             </div>
             <a
               className="mt-6 inline-flex items-center gap-3 border-b border-[#aeb19f] pb-1.5 text-[11px] font-semibold transition-[gap] hover:gap-4"
-              href="mailto:hello@alexmorgan.dev"
+              href="mailto:cristobaladrian090556@gmail.com"
             >
-              Tell me about your project <ArrowIcon />
+              cristobaladrian090556@gmail.com <ArrowIcon />
             </a>
+            <p className="mt-5 text-[10px] leading-6 text-[#92978e]">
+              <strong className="font-semibold text-[#d8dbd2]">Education</strong>
+              <br />
+              BS Information Technology · Bulacan State University
+              <br />
+              Meneses Campus · 2022–2026
+            </p>
           </div>
           <div className="absolute right-5 top-0 flex size-[70px] -translate-y-2 rotate-[10deg] flex-col items-center justify-center gap-1 rounded-full border border-[#b9c68d] text-[6px] font-semibold tracking-[0.12em] text-[#647337] sm:right-8 sm:top-auto sm:bottom-0 sm:size-20 sm:translate-y-1/4 lg:relative lg:right-auto lg:top-auto lg:bottom-auto lg:size-[106px] lg:translate-y-0 lg:self-center">
-            <span>GOOD IDEAS</span>
+            <span>BSIT GRADUATE</span>
             <SparkleIcon className="size-6" />
-            <span>GROW HERE</span>
+            <span>2026</span>
           </div>
         </div>
       </section>
 
       <footer className="bg-[#292b24] pt-20 text-[#f7f7f3] sm:pt-24" id="contact">
-        <div className="mx-auto w-full max-w-7xl px-5 text-center sm:px-8 lg:px-12">
+        <div className="mx-auto w-full max-w-[1720px] px-5 text-center sm:px-8 lg:px-12">
           <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8bcaa]">
-            Have a good one in mind?
+            Looking for the next opportunity?
           </p>
           <h2 className="mt-5 text-[clamp(3.3rem,9vw,5.25rem)] font-medium leading-[0.98] tracking-[-0.08em]">
-            Let&apos;s make
+            Let&apos;s build
             <br />
             <span className="font-serif font-normal italic tracking-[-0.075em] text-[#d4ed83]">
-              something matter.
+              something reliable.
             </span>
           </h2>
           <a
             className="mt-7 inline-flex items-center gap-2 border-b border-[#73766a] pb-2 text-xs transition-colors hover:text-[#d3ef75]"
-            href="mailto:hello@alexmorgan.dev"
+            href="mailto:cristobaladrian090556@gmail.com"
           >
-            hello@alexmorgan.dev <ArrowIcon diagonal />
+            cristobaladrian090556@gmail.com <ArrowIcon diagonal />
           </a>
 
           <div className="mt-16 flex min-h-20 flex-wrap items-center justify-between gap-x-5 gap-y-4 border-t border-[#494b43] py-5 text-[9px] text-[#b9baaf] sm:mt-20">
             <a className="text-[25px] font-extrabold tracking-[-0.09em] text-[#f7f7f3]" href="#home">
-              am<span className="text-[#a4c73b]">.</span>
+              ac<span className="text-[#a4c73b]">.</span>
             </a>
             <span className="order-last w-full text-left sm:order-none sm:w-auto">
-              Independent by nature. Collaborative by choice.
+              Software engineering intern · Open to junior opportunities.
             </span>
             <div className="flex gap-3 sm:gap-5">
-              <a className="inline-flex items-center gap-1 hover:text-white" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <a className="inline-flex items-center gap-1 hover:text-white" href="https://www.linkedin.com/in/adrian-cristobal-835099259/" target="_blank" rel="noreferrer">
                 LinkedIn <ArrowIcon diagonal />
               </a>
-              <a className="inline-flex items-center gap-1 hover:text-white" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                Instagram <ArrowIcon diagonal />
+              <a className="inline-flex items-center gap-1 hover:text-white" href="mailto:cristobaladrian090556@gmail.com">
+                Email <ArrowIcon diagonal />
               </a>
             </div>
-            <span>© {new Date().getFullYear()} Alex Morgan</span>
+            <span>© {new Date().getFullYear()} Adrian Charles</span>
           </div>
         </div>
       </footer>
