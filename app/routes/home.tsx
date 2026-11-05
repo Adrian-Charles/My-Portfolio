@@ -64,6 +64,18 @@ function SparkleIcon({ className }: { className: string }) {
   );
 }
 
+function PixelPortraitLogo({ className = "" }: { className?: string }) {
+  return (
+    <img
+      src="/images/adrian-charles-pixel.png"
+      alt=""
+      aria-hidden="true"
+      className={`aspect-square object-cover ring-1 ring-white/15 ${className}`}
+      style={{ imageRendering: "pixelated" }}
+    />
+  );
+}
+
 function FlowerIllustration() {
   return (
     <svg
@@ -87,20 +99,26 @@ function FlowerIllustration() {
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#111312] font-sans text-[#f2f3ef] antialiased selection:bg-[#c9d6a3] selection:text-[#111312]">
+      <a
+        href="#main-content"
+        className="fixed left-4 top-3 z-50 -translate-y-20 rounded-full bg-[#d3ef75] px-4 py-2 text-xs font-semibold text-[#111312] transition-transform focus:translate-y-0"
+      >
+        Skip to content
+      </a>
       <header className="mx-auto flex h-[76px] w-full max-w-[1720px] items-center justify-between border-b border-white/10 px-5 sm:h-[88px] sm:px-8 lg:px-12">
         <a
-          className="text-[30px] font-extrabold tracking-[-0.09em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#849d36]"
+          className="block size-10 overflow-hidden rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#849d36] sm:size-11"
           href="#home"
           aria-label="Adrian Charles, home"
         >
-          ACC<span className="text-[#a4c73b]">.</span>
+          <PixelPortraitLogo className="size-full rounded-md" />
         </a>
-        <nav className="flex items-center gap-4 text-[11px] font-medium sm:gap-9 sm:text-xs" aria-label="Main navigation">
-          <a className="transition-opacity hover:opacity-60" href="#work">Project</a>
-          <a className="transition-opacity hover:opacity-60" href="#about">About</a>
-          <a className="hidden transition-opacity hover:opacity-60 sm:inline" href="#skills">Skills</a>
+        <nav className="flex items-center gap-3 text-[10px] font-medium sm:gap-7 sm:text-xs" aria-label="Main navigation">
+          <a className="hidden min-h-11 items-center transition-colors hover:text-[#d3ef75] sm:flex" href="#work">Projects</a>
+          <a className="flex min-h-11 items-center transition-colors hover:text-[#d3ef75]" href="#about">About</a>
+          <a className="hidden min-h-11 items-center transition-colors hover:text-[#d3ef75] md:flex" href="#skills">Skills</a>
           <a
-            className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-3 py-2.5 transition-colors hover:border-white sm:gap-2 sm:px-4"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-white/20 px-3 transition-colors hover:border-[#d3ef75] hover:text-[#d3ef75] sm:gap-2 sm:px-4"
             href="#contact"
           >
             Let&apos;s talk <ArrowIcon diagonal />
@@ -112,12 +130,12 @@ export default function Home() {
         className="relative mx-auto grid min-h-[calc(100svh-76px)] w-full max-w-[1720px] items-center gap-10 px-5 py-12 sm:min-h-[650px] sm:px-8 sm:py-16 lg:grid-cols-[1fr_1fr] lg:px-12 lg:py-20"
         id="home"
       >
-        <div className="relative z-10">
+        <div className="relative z-10" id="main-content">
           <p className="flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#a9aca5] sm:text-[10px]">
             <span className="size-2 rounded-full bg-[#b7c98a] ring-4 ring-[#23251f]" />
             Software Engineer · BSIT Graduate
           </p>
-          <h1 className="mt-7 text-[clamp(3.5rem,8vw,6.75rem)] font-medium leading-[0.95] tracking-[-0.085em] sm:mt-8">
+          <h1 className="mt-7 text-[clamp(2.65rem,11vw,6.75rem)] font-medium leading-[0.95] tracking-[-0.085em] sm:mt-8">
             Building useful
             <br />
             software with
@@ -147,6 +165,9 @@ export default function Home() {
               src="/images/adrian-charles.jpg"
               alt="Adrian Charles"
               className="h-full w-full object-cover object-[center_35%]"
+              width="768"
+              height="1154"
+              fetchPriority="high"
             />
           </div>
           <span className="absolute bottom-[4%] right-[4%] rounded-full border border-white/15 bg-[#111312]/90 px-3 py-2 text-[9px] tracking-[0.08em] text-[#c9d6a3]">
@@ -302,8 +323,8 @@ export default function Home() {
           </a>
 
           <div className="mt-16 flex min-h-20 flex-wrap items-center justify-between gap-x-5 gap-y-4 border-t border-[#494b43] py-5 text-[9px] text-[#b9baaf] sm:mt-20">
-            <a className="text-[25px] font-extrabold tracking-[-0.09em] text-[#f7f7f3]" href="#home">
-              ac<span className="text-[#a4c73b]">.</span>
+            <a className="block size-8 overflow-hidden rounded-md" href="#home" aria-label="Adrian Charles, home">
+              <PixelPortraitLogo className="size-full rounded-md" />
             </a>
             <span className="order-last w-full text-left sm:order-none sm:w-auto">
               Software engineering intern · Open to junior opportunities.
